@@ -24,7 +24,8 @@ export default function Contact() {
 
       </div>
       </div>
-      {/* <div className="container">
+      <div>
+      <div className="container">
       <div className='d-flex justify-content-center py-3'>
         <div className='mx-3'><a href="misrnews" className=' text-decoration-none text-black fw-bolder'>أخبار مصر</a></div>
         <div  className='mx-3'><a href="policy" className=' text-decoration-none text-black fw-bolder'> سياسة</a></div>
@@ -36,7 +37,8 @@ export default function Contact() {
 
         
       </div>
-    </div> */}
+    </div>
+    </div>
     </div>
   )
 }
