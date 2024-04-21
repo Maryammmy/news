@@ -86,20 +86,26 @@ const YourComponent = () => {
   }, []);
 
   return (
-    <div className='w-60 bg-white my-3 shadow' >
+    <div className=' w-60 bg-white my-3 shadow' >
+      <div className="container-fluid">
       <h3 className='fw-bolder px-2 pt-2'>أخبار مصر</h3>
       {data.map((item, index) => (
-        <div key={index} className='d-flex  border-bottom  py-2'>
-          <div>
-          <div className='w-img'> <img src={item.img} alt={`Image ${index + 1}`}  /></div>
-          </div>
-         
-          <div className='me-2'><h5>{item.title}</h5>
-          <p>{item.description}</p>
-          <p className='time'> {item.dateTime}</p>
-          </div>
+      <div className="row" key={index}>
+        <div className="col-md-5">
+          <div className='w-img'>
+            <img src={item.img} alt={`Image ${index + 1}`} />
+            </div>
         </div>
+        <div className="col-md-7  ">
+        <h5>{item.title}</h5>
+          <p>{item.description}</p>
+          <p>{item.dateTime}</p>
+        </div>
+        
+      </div>
+      
       ))}
+      </div>
     </div>
   );
 };
