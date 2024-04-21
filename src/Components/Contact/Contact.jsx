@@ -26,7 +26,7 @@ export default function Contact() {
       </div>
      
       <div className="container">
-      <div className='row justify-content-center py-3'>
+      <div className='row justify-content-center align-items-center py-3 bg-danger'>
         <div className=' col-md-1 '><a href="misrnews" className=' text-decoration-none text-black fw-bolder'>أخبار مصر</a></div>
         <div  className='col-md-1'><a href="policy" className=' text-decoration-none text-black fw-bolder'> سياسة</a></div>
         <div  className='col-md-1'><a href="sports" className=' text-decoration-none text-black fw-bolder'>رياضة</a></div>
