@@ -10,6 +10,7 @@ export default function Contact() {
           <div className='logo'>
             <img src={logo} alt="logo" className='w-100 h-100 object-fit-cover' />
           </div>
+          <div className="container-fulid mx-5 px-5">
           <div className='d-flex mt-4'>
             <div className='icon-white mx-2'>  <a href='https://web.facebook.com/' target='_blank' className='color'><i className="fa-brands fa-facebook-f "></i></a></div>
             <div className='icon-white mx-2'><a href='https://www.youtube.com' target='_blank' className='color'><i className="fa-brands fa-youtube "></i></a> </div>
@@ -17,6 +18,7 @@ export default function Contact() {
             <div className='icon-white mx-2'><a href='https://www.instagram.com/' target='_blank' className='color'><i className="fa-brands fa-instagram fw-bolder "></i></a></div>
 
           </div>
+        </div>
         </div>
 
 

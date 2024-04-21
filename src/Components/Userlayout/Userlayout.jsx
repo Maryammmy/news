@@ -9,12 +9,12 @@ import Footer from '../Footer/Footer'
 export default function Userlayout() {
   return (
     <>
-       <Top />
-     <Header />
-      <Navbar /> 
+      <Top />
+      <Header />
+      <Navbar />
       <Outlet />
-       <Contact/>
-      {/* <Footer/>   */}
+      <Contact />
+      <Footer />
 
     </>
   )
