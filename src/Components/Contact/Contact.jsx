@@ -3,7 +3,7 @@ import logo from '../../Assets/Images/logo.png'
 
 export default function Contact() {
   return (
-    <div className='contact-bg pt-3'>
+    <div className='contact-bg pt-3 '>
       <div className='contact-brdr'>
       <div className="container-fulid mx-5 px-5">
         <div className='d-flex justify-content-between'>

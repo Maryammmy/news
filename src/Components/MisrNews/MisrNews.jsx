@@ -96,7 +96,7 @@ const YourComponent = () => {
             <img src={item.img} alt={`Image ${index + 1}`} />
             </div>
         </div>
-        <div className="col-md-7  ">
+        <div className="col-md-7 ">
         <h5>{item.title}</h5>
           <p>{item.description}</p>
           <p>{item.dateTime}</p>
