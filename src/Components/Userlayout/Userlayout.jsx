@@ -13,8 +13,8 @@ export default function Userlayout() {
      <Header />
       <Navbar /> 
       <Outlet />
-      {/* <Contact/>
-      <Footer/>  */}
+       <Contact/>
+      {/* <Footer/>   */}
 
     </>
   )
