@@ -27,13 +27,13 @@ export default function Contact() {
      
       <div className="container">
       <div className='d-flex justify-content-center py-3'>
-        <div className='px-3 px-sm-1'><a href="misrnews" className=' text-decoration-none text-black fw-bolder'>أخبار مصر</a></div>
-        <div  className='px-3 px-sm-1'><a href="policy" className=' text-decoration-none text-black fw-bolder'> سياسة</a></div>
-        <div  className='px-3 px-sm-1'><a href="sports" className=' text-decoration-none text-black fw-bolder'>رياضة</a></div>
-        <div  className='px-3 px-sm-1'><a href="economics" className=' text-decoration-none text-black fw-bolder'>اقتصاد</a></div>
-        <div  className='px-3 px-sm-1'><a href="culture" className=' text-decoration-none text-black fw-bolder'>ثقافة وفنون</a></div>
-        <div  className='px-3 px-sm-1'><a href="events" className=' text-decoration-none text-black fw-bolder'>حوادث</a></div>
-        <div  className='px-3 px-sm-1'><a href="provinces" className=' text-decoration-none text-black fw-bolder'>محافظات</a></div>
+        <div className='  px-sm-1  px-md-3 '><a href="misrnews" className=' text-decoration-none text-black fw-bolder'>أخبار مصر</a></div>
+        <div  className='px-sm-1  px-md-3'><a href="policy" className=' text-decoration-none text-black fw-bolder'> سياسة</a></div>
+        <div  className='px-sm-1  px-md-3'><a href="sports" className=' text-decoration-none text-black fw-bolder'>رياضة</a></div>
+        <div  className='px-sm-1  px-md-3'><a href="economics" className=' text-decoration-none text-black fw-bolder'>اقتصاد</a></div>
+        <div  className='px-sm-1  px-md-3'><a href="culture" className=' text-decoration-none text-black fw-bolder'>ثقافة وفنون</a></div>
+        <div  className='px-sm-1  px-md-3'><a href="events" className=' text-decoration-none text-black fw-bolder'>حوادث</a></div>
+        <div  className='px-sm-1  px-md-3'><a href="provinces" className=' text-decoration-none text-black fw-bolder'>محافظات</a></div>
 
         
       </div>

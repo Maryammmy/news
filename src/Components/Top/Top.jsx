@@ -18,7 +18,7 @@ export default function Top() {
       
         <div className='d-flex justify-content-around py-2'>
             <div>{currentDateTime}</div>
-            <div className='main-bg text-white  py-2 px-2 px-sm-5 py-md-0 rounded-pill'>
+            <div className='main-bg text-white px-sm-5 px-md-2 py-md-2 py-sm-0 rounded-pill'>
               <i className="fa-regular fa-newspaper"></i><span> الجريدة الورقية</span></div>
             <div className='d-flex'>
               <div className='icon mx-1'>  <a href='https://web.facebook.com/' target='_blank' className='text-white'><i className="fa-brands fa-facebook-f "></i></a></div>
