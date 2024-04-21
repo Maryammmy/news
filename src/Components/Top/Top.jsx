@@ -18,7 +18,7 @@ export default function Top() {
       
         <div className='d-flex justify-content-around py-2'>
             <div>{currentDateTime}</div>
-            <div className='main-bg text-white px-md-3  py-md-2 rounded-pill  text-center'>
+            <div className='main-bg text-white  px-md-3 py-md-2 rounded-pill  text-center'>
               <i className="fa-regular fa-newspaper"></i><span className='pe-sm-1'> الجريدة الورقية</span>
               </div>
             <div className='d-flex'>

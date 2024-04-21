@@ -93,6 +93,9 @@ border-bottom: 2px solid  #F7AE0D;
 .time{
   color: #F7AE0D;
 }
+.but:hover{
+  color: #F7AE0D;
+}
 @media (max-width:575px) {
   .w-60{
     width: 100%;
