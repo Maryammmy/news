@@ -99,16 +99,16 @@ const YourComponent = () => {
       <div className="container-fluid">
         <h3 className='fw-bolder px-2 pt-2'>أخبار مصر</h3>
         {data.map((item, index) => (
-          <div className="row" key={index}>
+          <div className="row py-3" key={index}  onClick={()=>{
+            handleTitleClick(item)
+          }} >
             <div className="col-md-5">
               <div className='w-img'>
                 <img src={item.img} alt={`Image ${index + 1}`} />
               </div>
             </div>
             <div className="col-md-7 ">
-              <button className='btn text-end but border-0' onClick={()=>{
-                handleTitleClick(item)
-              }}><h5>{item.title}</h5> </button>
+              <button className='btn text-end but border-0'><h5>{item.title}</h5> </button>
               <p>{item.description}</p>
               <p>{item.dateTime}</p>
             </div>
