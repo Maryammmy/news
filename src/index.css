@@ -1,12 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   direction: rtl;
   background-color: #f8f9fa;
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
 }
 .direction{
   direction: ltr;
@@ -20,9 +22,10 @@ code {
   height: 100px;
 }
 .nav-link{
-  font-weight: 700 ;
+  font-weight: 800 ;
   border-radius: 4px;
   color: black ;
+  font-size: 17px;
 }
 .nav-link:hover{
   background-color: #010026;
@@ -96,6 +99,14 @@ border-bottom: 2px solid  #F7AE0D;
 .but:hover{
   color: #F7AE0D;
 }
+.brdr-top{
+  border-top: 2px solid  #F7AE0D;
+}
+.brdr-bottom{
+border-bottom: 2px solid gainsboro;
+}
+
+
 @media (max-width:575px) {
   .w-60{
     width: 100%;
