@@ -1,10 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { storecontext } from '../Context/Context';
 import { useNavigate } from 'react-router-dom';
 import { doc, getDoc, collection, query, where, getDocs } from "firebase/firestore"; // Add these imports
 import { db } from '../../Firebase/Firebase';
-
-const Home = () => {
+const Cars = () => {
   const { setSelected } = useContext(storecontext);
   const navigate = useNavigate();
   const [articleData, setArticleData] = useState([]);
@@ -25,30 +24,33 @@ const Home = () => {
     return date.toLocaleDateString('ar-EG', options);
   }
 
-  async function fetchDataFromFirestoreByCategory() {
-    try {
-      // Query the Firestore collection where categoryName is equal to 'عام'
-      const querySnapshot = await getDocs(query(collection(db, 'Artciles'), where('categoryName', '==','عام')));
   
-      // Iterate through the documents in the query snapshot
-      querySnapshot.forEach((doc) => {
-        const data = doc.data();
-        console.log("Document data:", data);
-        data.date = formatDate(data.date);
-        // Update state with fetched data
-        setArticleData(prevState => [...prevState, data]);
-      });
-  
-      setLoading(false);
-    } catch (error) {
-      console.error("Error fetching documents:", error);
-    }
+// Function to fetch data from Firestore based on categoryName
+async function fetchDataFromFirestoreByCategory() {
+  try {
+    // Query the Firestore collection where categoryName is equal to 'السيارات'
+    const querySnapshot = await getDocs(query(collection(db, 'Artciles'), where('categoryName', '==', 'السيارات')));
+
+    // Iterate through the documents in the query snapshot
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      console.log("Document data:", data);
+      data.date = formatDate(data.date);
+      // Update state with fetched data
+      setArticleData(prevState => [...prevState, data]);
+    });
+
+    setLoading(false);
+  } catch (error) {
+    console.error("Error fetching documents:", error);
   }
-  
-  
-  useEffect(() => {
-    fetchDataFromFirestoreByCategory();
-  }, []);
+}
+
+
+useEffect(() => {
+  fetchDataFromFirestoreByCategory();
+}, []);
+
 
   function handleTitleClick(item) {
     setSelected(item);
@@ -81,4 +83,7 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Cars;
+
+
+

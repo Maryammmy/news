@@ -1,16 +1,16 @@
 import React from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './Components/Home/Home';
-import MisrNews from './Components/MisrNews/MisrNews';
-import Policy from './Components/Policy/Policy';
-import Sports from './Components/Sports/Sports';
-import Economics from './Components/Economics/Economics';
-import Culture from './Components/Culture/Culture';
-import Events from './Components/Events/Events';
-import Provinces from './Components/Provinces/Provinces';
+import Cars from './Components/Cars/Cars';
+import Trade from './Components/Trade/Trade';
+import Realstate from './Components/Realstate/Realstate';
+import Media from './Components/Media/Media';
+import Services from './Components/Services/Services';
 import Userlayout from './Components/Userlayout/Userlayout';
 import Context from './Components/Context/Context';
 import Title from './Components/Title/Title';
+import Firebase from './Firebase/Firebase';
+
 
 export default function App() {
   let routes = createBrowserRouter([
@@ -18,24 +18,18 @@ export default function App() {
       path: "/",
       element: <Userlayout/>,
      
-      _children: [
-        { index: true, element: <Home /> },
-        { path: "home", element: <Home /> },
-        { path: "misrnews", element: <MisrNews /> },
-        { path: "policy", element: <Policy /> },
-        { path: "sports", element: <Sports /> },
-        { path: "economics", element: <Economics /> },
-        { path: "culture", element: <Culture /> },
-        { path: "events", element: <Events /> },
-        { path: "provinces", element: <Provinces /> },
+      children: [
+        { index:true, element:<Home/> },
+        { path: "عام", element: <Home /> },
+        { path: "السيارات", element: <Cars /> },
+        { path: "صناعةوتجارة", element: <Trade/> },
+        { path: "عقارات", element: <Realstate /> },
+        { path: "مالتي ميديا", element: <Media /> },
+        { path: "خدمات", element: <Services/> },
+        
         { path: "title", element: <Title /> },
       ],
-      get children() {
-        return this._children;
-      },
-      set children(value) {
-        this._children = value;
-      },
+    
     },
   
   ]);

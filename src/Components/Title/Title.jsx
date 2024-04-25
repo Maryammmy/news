@@ -7,18 +7,18 @@ export default function Title() {
   return (
     <div className=' w-60 bg-white my-3 shadow' >
     <div className="container-fluid">
-      <h3 className='fw-bolder px-2 pt-2'>أخبار مصر</h3>
+      <h3 className='fw-bolder px-2 pt-2'>{selected?.categoryName}</h3>
      
         <div className="row py-3"  >
           <div className="col-md-5">
             <div className='w-img'>
-              <img src={selected.img} alt={'Image'} />
+              <img src={selected?.images[0]} alt={'Image'} />
             </div>
           </div>
           <div className="col-md-7 ">
-            <button className='btn text-end but border-0'><h5>{selected.title}</h5> </button>
-            <p>{selected.description}</p>
-            <p>{selected.dateTime}</p>
+            <button className='btn text-end but border-0'><h5>{selected?.title}</h5> </button>
+            <p>{selected?.description}</p>
+            <p>{selected?.date}</p>
           </div>
 
         </div>

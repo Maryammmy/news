@@ -15,46 +15,42 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link" to="home" >
+                {/* <NavLink className="nav-link" to="عام" >
                   <i className="fa-solid fa-house-chimney basic-background italic px-2 py-1" />
 
+                </NavLink> */}
+              </li>
+              <li className="nav-item">
+                <NavLink to='عام' className="nav-link">
+                عام
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to='misrnews' className="nav-link">
-                  أخبار مصر
+                <NavLink to="السيارات" className="nav-link" >
+                السيارات
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="policy" className="nav-link" >
-                  سياسة
+                <NavLink to="صناعةوتجارة" className="nav-link" >
+                صناعة و تجارة
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="sports" className="nav-link" >
-                  رياضة
+                <NavLink to="عقارات" className="nav-link" >
+                عقارات
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="economics" className="nav-link" >
-                  اقتصاد
+                <NavLink to="مالتي ميديا" className="nav-link" >
+                مالتي ميديا
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="culture" className="nav-link" >
-                  ثقافة وفنون
+                <NavLink to="خدمات" className="nav-link" >
+                خدمات
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink to="events" className="nav-link" >
-                  حوادث
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="provinces" className="nav-link" >
-                  محافظات
-                </NavLink>
-              </li>
+             
 
 
             </ul>
