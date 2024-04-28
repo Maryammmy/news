@@ -9,7 +9,7 @@ import Services from './Components/Services/Services';
 import Userlayout from './Components/Userlayout/Userlayout';
 import Context from './Components/Context/Context';
 import Title from './Components/Title/Title';
-import Firebase from './Firebase/Firebase';
+
 
 
 export default function App() {
@@ -26,8 +26,8 @@ export default function App() {
         { path: "عقارات", element: <Realstate /> },
         { path: "مالتي ميديا", element: <Media /> },
         { path: "خدمات", element: <Services/> },
-        
         { path: "title", element: <Title /> },
+       
       ],
     
     },

@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Navbar() {
   return (
@@ -21,32 +21,32 @@ export default function Navbar() {
                 </NavLink> */}
               </li>
               <li className="nav-item">
-                <NavLink to='عام' className="nav-link">
+                <NavLink to='/عام' className="nav-link">
                 عام
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="السيارات" className="nav-link" >
+                <NavLink to="/السيارات" className="nav-link" >
                 السيارات
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="صناعةوتجارة" className="nav-link" >
+                <NavLink to="/صناعةوتجارة" className="nav-link" >
                 صناعة و تجارة
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="عقارات" className="nav-link" >
+                <NavLink to="/عقارات" className="nav-link" >
                 عقارات
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="مالتي ميديا" className="nav-link" >
+                <NavLink to="/مالتي ميديا" className="nav-link" >
                 مالتي ميديا
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="خدمات" className="nav-link" >
+                <NavLink to="/خدمات" className="nav-link" >
                 خدمات
                 </NavLink>
               </li>
@@ -56,7 +56,9 @@ export default function Navbar() {
             </ul>
 
           </div>
-          <i className="fa-solid fa-bars  italic px-2 py-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+        
+          <i className="fa-solid fa-bars  italic px-2 py-1 fs-5" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+         
         </div>
       </nav>
 

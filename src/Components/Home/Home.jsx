@@ -56,29 +56,32 @@ const Home = () => {
   }
 
   return (
-    <div className=' w-60 bg-white my-3 shadow'>
+    <div className=' w-60 bg-white my-3 shadow margin'>
       {loading ? (
         <p>Loading...</p>
       ) : (
         <>
         <h4 className=' px-2 py-2 shadow brdr-top brdr-bottom fw-bolder'>عام</h4>
         <div className='container-fluid'>
-         
-          {articleData.map((article, index) => (
-            <div key={index} className="row py-3 brdr-bottom " onClick={() => handleTitleClick(article)}>
-              <div className="col-md-5">
-                <div className='w-img'>
-                  <img src={article.images[0]} alt={`Image`} />
-                </div>
-              </div>
-              <div className="col-md-7">
-                <button className='btn text-end but border-0 pe-0'><h5 className='fw-bolder'>{article.title}</h5> </button>
-                <p>{article.description}</p>
-                <p className='time'>{article.date}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+
+{articleData.map((article, index) => (
+  <div key={index} className="row py-3 px-2" onClick={() => handleTitleClick(article)}>
+    <div className="col-md-4">
+      <div className='w-img'>
+        <img src={article.images[0]} alt={`Image`} />
+      </div>
+    </div>
+    <div className="col-md-7 ">
+      <h3 className='fw-bolder title'>{article.title}</h3>
+      <p className='fs-5 text-break wrap-text'>
+        {article.description && `${article.description.split(' ').slice(0, 5).join(' ')}...`}
+      </p>
+
+      <p className='time'>{article.date}</p>
+    </div>
+  </div>
+))}
+</div>
         </>
 
       )}
