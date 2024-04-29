@@ -18,10 +18,10 @@ export default function Title() {
     }
   };
   return (
-    <div className=' w-60 bg-white my-3 shadow margin'>
+    <div className=' w-60 bg-white my-3 shadow me-lg-5'>
       <h4 className='px-2 py-2 shadow brdr-top brdr-bottom fw-bolder'>{selected?.categoryName == 'مالتي ميديا' ? 'انفوجراف' : selected?.categoryName}</h4>
       <div className='container-fluid'>
-        <div className="row py-3 px-2"  >
+        <div className="row py-3 px-2 "  >
           <div className="col-md-12">
             <h3 className='fw-bolder title'>{selected?.title}</h3>
           </div>

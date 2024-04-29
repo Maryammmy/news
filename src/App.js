@@ -9,6 +9,7 @@ import Services from './Components/Services/Services';
 import Userlayout from './Components/Userlayout/Userlayout';
 import Context from './Components/Context/Context';
 import Title from './Components/Title/Title';
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 
 
@@ -35,9 +36,11 @@ export default function App() {
   ]);
   return (
     <div>
+        <SkeletonTheme baseColor="#88888833">
       <Context>
       <RouterProvider router={routes}/>
       </Context>
+      </SkeletonTheme>
       
     </div>
   )

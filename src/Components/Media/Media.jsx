@@ -3,6 +3,7 @@ import { storecontext } from '../Context/Context';
 import { useNavigate } from 'react-router-dom';
 import { doc, getDoc, collection, query, where, getDocs } from "firebase/firestore"; // Add these imports
 import { db } from '../../Firebase/Firebase';
+import CardSkeleton from '../CardSkeleton/CardSkeleton';
 
 const Media = () => {
   const { setSelected } = useContext(storecontext);
@@ -29,21 +30,20 @@ const Media = () => {
 
   async function fetchDataFromFirestoreByCategory() {
     try {
-      const querySnapshot = await getDocs(query(collection(db, 'Artciles'), where('categoryName', '==','مالتي ميديا')));
-  
+      const querySnapshot = await getDocs(query(collection(db, 'Artciles'), where('categoryName', '==', 'مالتي ميديا')));
+
       querySnapshot.forEach((doc) => {
         const data = doc.data();
-        console.log("Document data:", data);
-        data.date = formatDate(data.date);
+       
         setArticleData(prevState => [...prevState, data]);
       });
-  
+
       setLoading(false);
     } catch (error) {
       console.error("Error fetching documents:", error);
     }
   }
-  
+
   useEffect(() => {
     fetchDataFromFirestoreByCategory();
   }, []);
@@ -54,30 +54,29 @@ const Media = () => {
   }
 
   return (
-    <div className=' w-60 bg-white my-3 shadow margin'>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <>
-        <h4 className=' px-2 py-2 shadow brdr-top brdr-bottom fw-bolder'>انفوجراف</h4>
-        <div className='container-fluid'>
+    <div className=' w-60 bg-white my-3 shadow me-lg-5'>
 
-            {articleData.map((article, index) => (
-              <div key={index} className="row py-3 px-2" onClick={() => handleTitleClick(article)}>
-                <div className="col-md-4">
-                  <div className='w-img'>
-                    <img src={article.images[0]} alt={`Image`} />
-                  </div>
-                </div>
-                <div className="col-md-7">
-                  <h3 className='fw-bolder title'>{article.title}</h3>
-                  <p className='time'>{article.date}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </>
-      )}
+
+      <>
+        <h4 className=' px-2 py-2 shadow brdr-top brdr-bottom fw-bolder'>انفوجراف</h4>
+      {loading?<CardSkeleton cards={10}/> :  <div className='container-fluid'>
+
+{articleData.map((article, index) => (
+  <div key={index} className="row py-3 px-3" onClick={() => handleTitleClick(article)}>
+    <div className="col-md-4 pe-0">
+      <div className='w-img'>
+        <img src={article.images[0]} alt={`Image`} />
+      </div>
+    </div>
+    <div className="col-md-7 padding-right pe-xl-4 pe-xxl-0">
+      <h4 className='fw-bolder title'>{article.title}</h4>
+      <p className='time'>{formatDate(article.date)}</p>
+    </div>
+  </div>
+))}
+</div>}
+      </>
+
     </div>
   );
 };

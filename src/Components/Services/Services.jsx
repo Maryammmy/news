@@ -3,6 +3,7 @@ import { storecontext } from '../Context/Context';
 import { useNavigate } from 'react-router-dom';
 import { doc, getDoc, collection, query, where, getDocs } from "firebase/firestore"; // Add these imports
 import { db } from '../../Firebase/Firebase';
+import CardSkeleton from '../CardSkeleton/CardSkeleton';
 const Services = () => {
   const { setSelected } = useContext(storecontext);
   const navigate = useNavigate();
@@ -34,9 +35,6 @@ const Services = () => {
       // Iterate through the documents in the query snapshot
       querySnapshot.forEach((doc) => {
         const data = doc.data();
-        console.log("Document data:", data);
-        data.date = formatDate(data.date);
-        // Update state with fetched data
         setArticleData(prevState => [...prevState, data]);
       });
 
@@ -58,33 +56,31 @@ const Services = () => {
   }
 
   return (
-    <div className=' w-60 bg-white my-3 shadow margin'>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
+    <div className=' w-60 bg-white my-3 shadow me-lg-5'>
+  
         <>
           <h4 className=' px-2 py-2 shadow brdr-top brdr-bottom fw-bolder'>خدمات</h4>
-          <div className='container-fluid'>
+         {loading?<CardSkeleton cards={10}/>: <div className='container-fluid'>
 
-            {articleData.map((article, index) => (
-              <div key={index} className="row py-3 px-2" onClick={() => handleTitleClick(article)}>
-                <div className="col-md-4">
-                  <div className='w-img'>
-                    <img src={article.images[0]} alt={`Image`} />
-                  </div>
-                </div>
-                <div className="col-md-7 ">
-                  <h3 className='fw-bolder title'>{article.title}</h3>
-                  <p className='fs-5 text-break wrap-text'>
-                    {article.description && `${article.description.split(' ').slice(0, 5).join(' ')}...`}
-                  </p>
-                  <p className='time'>{article.date}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+{articleData.map((article, index) => (
+  <div key={index} className="row py-3 px-3" onClick={() => handleTitleClick(article)}>
+    <div className="col-md-4 pe-0">
+      <div className='w-img'>
+        <img src={article.images[0]} alt={`Image`} />
+      </div>
+    </div>
+    <div className="col-md-7 padding-right pe-xl-4 pe-xxl-0">
+      <h4 className='fw-bolder title'>{article.title}</h4>
+      <p className='fs-5 text-break wrap-text'>
+        {article.description && `${article.description.split(' ').slice(0, 5).join(' ')}...`}
+      </p>
+      <p className='time'>{formatDate(article.date)}</p>
+    </div>
+  </div>
+))}
+</div>}
         </>
-      )}
+    
     </div>
   );
 };
