@@ -10,6 +10,9 @@ body {
   font-style: normal;
   font-variation-settings: "slnt" 0;
 }
+.min-h{
+  min-height: 300px;
+}
 .direction{
   direction: ltr;
 }
