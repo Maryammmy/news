@@ -70,7 +70,7 @@ const Media = () => {
 
       <>
         
-        <h4 className=' px-2 py-2 shadow brdr-top brdr-bottom fw-bolder'>مالتي ميديا"</h4>
+        <h4 className=' px-2 py-2 shadow brdr-top brdr-bottom fw-bolder'>مالتي ميديا</h4>
         <select
               name="subCategory"
               value={subItem}
