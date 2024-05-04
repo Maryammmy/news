@@ -133,8 +133,6 @@ border-bottom: 2px solid gainsboro;
 .title:hover{
   color: #F7AE0D;
 }
-
-
 .skeleton-animation {
   animation: pulse 1.5s ease-in-out infinite;
 }
@@ -153,6 +151,9 @@ border-bottom: 2px solid gainsboro;
   .padding-right{
     padding-right: 0px;
    }
+   .w-input{
+    width: 50%;
+  }
    @media (max-width:575px) {
     .w-60{
       width: 100%;
@@ -164,7 +165,9 @@ border-bottom: 2px solid gainsboro;
       .w-image{
         width: 300px;
         height: 200px;
-      
+      }
+      .w-input{
+        width: 100%;
       }
   }
   @media (min-width:576px) and (max-width:767px) {
@@ -175,6 +178,9 @@ border-bottom: 2px solid gainsboro;
       width: 500px;
       height: 200px;
     
+    }
+    .w-input{
+      width: 100%;
     }
   }
   
@@ -190,6 +196,9 @@ border-bottom: 2px solid gainsboro;
    .padding-right{
     padding-right: 90px;
    }
+   .w-input{
+    width: 80%;
+  }
   }
   @media (min-width:992px) and (max-width:1199px) {
     .w-60{
@@ -203,4 +212,7 @@ border-bottom: 2px solid gainsboro;
     padding-right: 70px;
     
    }
+   .w-input{
+    width: 70%;
+  }
   }
